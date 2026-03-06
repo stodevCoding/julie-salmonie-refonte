@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+
+# IDE / Env
+.claude/
+.vscode/
+.env
+.env.*
