@@ -299,6 +299,15 @@ section h2 { font-family: var(--font-heading); font-weight: 400; font-size: clam
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.tarif-card-desc {
+  font-size: 0.82rem; color: var(--accent); font-style: italic;
+  line-height: 1.6; margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.tarif-desc {
+  font-size: 0.8rem; color: var(--text-dim); line-height: 1.5;
+  margin: 2px 0 10px; font-style: italic;
+}
 .tarif-category { margin-bottom: 20px; }
 .tarif-category:last-child { margin-bottom: 0; }
 .tarif-category h4 {
