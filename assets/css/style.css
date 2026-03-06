@@ -333,6 +333,31 @@ section h2 { font-family: var(--font-heading); font-weight: 400; font-size: clam
   color: var(--text-dim); letter-spacing: 0.05em;
 }
 
+/* ---------- BLOG ---------- */
+#blog { background: var(--bg); }
+.blog-header { text-align: center; margin-bottom: 60px; }
+
+.blog-grid { max-width: 900px; margin: 0 auto; }
+
+.blog-card {
+  display: grid; grid-template-columns: 300px 1fr; gap: 40px;
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: border-color 0.4s ease;
+}
+.blog-card:hover { border-color: var(--border); }
+[data-theme="dark"] .blog-card { box-shadow: none; }
+
+.blog-img { overflow: hidden; }
+.blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+.blog-card:hover .blog-img img { transform: scale(1.04); }
+
+.blog-content { padding: 32px 32px 32px 0; display: flex; flex-direction: column; justify-content: center; }
+.blog-date { font-size: 0.8rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+.blog-content h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 500; margin-bottom: 16px; line-height: 1.3; }
+.blog-content p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 8px; }
+.blog-cta-text { font-style: italic; color: var(--accent) !important; margin-top: 8px; }
+
 /* ---------- CONTACT ---------- */
 #contact { background: var(--bg); }
 
@@ -365,6 +390,9 @@ footer { background: var(--bg); border-top: 1px solid var(--border-subtle); padd
 .footer-logo { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.05em; }
 .footer-sep { width: 32px; height: 1px; background: var(--border); }
 .footer-copy { font-size: 0.82rem; color: var(--text-dim); letter-spacing: 0.05em; }
+.footer-link { color: var(--accent); transition: color 0.3s; }
+.footer-link:hover { color: var(--accent-dark); }
+.footer-socials { display: flex; justify-content: center; gap: 12px; margin-top: 16px; }
 
 /* ---------- REVEAL ANIMATIONS ---------- */
 .reveal, .reveal-up {
@@ -396,6 +424,8 @@ footer { background: var(--bg); border-top: 1px solid var(--border-subtle); padd
   .tarifs-grid { grid-template-columns: 1fr; }
   .tendances-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .blog-card { grid-template-columns: 1fr; }
+  .blog-content { padding: 24px; }
 }
 
 @media (max-width: 480px) {
